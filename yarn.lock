@@ -116,10 +116,10 @@
   resolved "https://registry.yarnpkg.com/@biomejs/cli-win32-x64/-/cli-win32-x64-1.6.1.tgz#ea70f4bc3662de8e576b47291bb93cbd18d09b81"
   integrity sha512-5TUZbzBwnDLFxLVGEPsorNi6eC2Gt+z4Oei9Qvq0M/4c4/mjZ96ABgwao/tMxf4ZBr/qyy2YdvF+gX9Rc+xC0A==
 
-"@coinbase/wallet-sdk@3.9.1", "@coinbase/wallet-sdk@npm:@coinbase/wallet-sdk@4.0.0-beta.0":
-  version "4.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@coinbase/wallet-sdk/-/wallet-sdk-4.0.0-beta.0.tgz#1f742e2525469e09b8541cc4e7e827d5795cf1b0"
-  integrity sha512-ThSlOdAz/eb6kovMWCgnrXt1BBxLM1EgwSSMaFPk/Z1x+j79e+b7+Ih9q7pqHX6eCbQqY62BrFv4x/bKBDVXqw==
+"@coinbase/wallet-sdk@3.9.1", "@coinbase/wallet-sdk@npm:@coinbase/wallet-sdk@4.0.0-beta.1":
+  version "4.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@coinbase/wallet-sdk/-/wallet-sdk-4.0.0-beta.1.tgz#7c4dadf64be1933ddc0c31dd630c712ee8e503e1"
+  integrity sha512-VRZHPHDfEr0LH1edGpv/QcelYyiDu2CEK6qvMZ71Du8Zy6GI0jrH02xFRCarCEbPwo0PSF47fO/APyqFOp9Alg==
   dependencies:
     buffer "^6.0.3"
     clsx "^1.2.1"

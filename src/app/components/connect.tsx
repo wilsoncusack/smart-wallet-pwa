@@ -1,18 +1,11 @@
 "use client";
 
-import { baseSepolia } from "viem/chains";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
-import { coinbaseWallet, injected } from "wagmi/connectors";
 
 function Connect() {
 	const account = useAccount();
 	const { connectors, connect, status, error } = useConnect();
-	const connector = coinbaseWallet({
-		appName: "EdgeTech",
-		chainIds: [baseSepolia.id.toString()],
-		connectionPreference: "embedded",
-	});
-	// const connector = injected();
+	const connector = connectors[0];
 
 	return (
 		<div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
@@ -32,6 +25,7 @@ function Connect() {
 						<span className="text-gray-400">or</span>
 
 						<button
+							type="button"
 							onClick={() => connect({ connector })}
 							className="text-blue-500 underline cursor-pointer dark:text-blue-300 font-bold"
 						>

@@ -4,7 +4,12 @@ import { coinbaseWallet, injected } from "wagmi/connectors";
 
 export const config = createConfig({
 	chains: [baseSepolia],
-	connectors: [coinbaseWallet({ appName: "A Cool App" })],
+	connectors: [
+		coinbaseWallet({
+			appName: "A Cool App",
+			chainIds: [baseSepolia.id.toString()],
+		}),
+	],
 	ssr: true,
 	transports: {
 		[baseSepolia.id]: http(),
