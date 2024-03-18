@@ -25,14 +25,15 @@ function App() {
 	const chainId = useChainId();
 	const { switchChain } = useSwitchChain();
 	const { writeContract } = useWriteContract();
+	console.log(chainId)
 
-	useEffect(() => {
-		if (!account.address) return;
-		console.log("here " + account.chainId);
-		if (account.chainId === baseSepolia.id) return;
-		console.log("switching ");
-		switchChain({ chainId: baseSepolia.id });
-	}, [account.address, account.chainId, chainId]);
+	// useEffect(() => {
+	// 	if (!account.address) return;
+	// 	console.log("here " + account.chainId);
+	// 	if (account.chainId === baseSepolia.id) return;
+	// 	console.log("switching ");
+	// 	switchChain({ chainId: baseSepolia.id });
+	// }, [account.address, account.chainId, chainId]);
 
 	if (account.status != "connected") {
 		return <Connect />;
