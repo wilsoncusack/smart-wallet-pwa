@@ -1,9 +1,8 @@
 "use client";
 
-import { useAccount, useWriteContract } from "wagmi";
+import { useAccount } from "wagmi";
+import { useWriteContract } from "wagmi";
 import Connect from "./components/connect";
-import { writeContract } from "viem/actions";
-import { baseSepolia } from "viem/chains";
 
 const abi = [
 	{
@@ -17,21 +16,7 @@ const abi = [
 
 function App() {
 	const account = useAccount();
-	
-	
-	const write = async () => {
-		if (!account.address) return 
-		
-		const p = await account.connector?.getProvider()
-		writeContract(p as any, {
-			account: account.address,
-			address: "0x119Ea671030FBf79AB93b436D2E20af6ea469a19",
-			abi,
-			functionName: "safeMint",
-			args: [account.address],
-			chain: baseSepolia
-		})
-	}
+	const { writeContract } = useWriteContract();
 
 	if (account.status !== "connected") {
 		return <Connect />;
@@ -44,7 +29,13 @@ function App() {
 					type="button"
 					className="mt-5 w-full py-2 bg-gray-600 text-white font-bold rounded transition duration-300 ease-in-out transform hover:scale-105 mb-3"
 					onClick={() =>
-						write()
+						writeContract({
+							__mode: "prepared",
+							address: "0x119Ea671030FBf79AB93b436D2E20af6ea469a19",
+							abi,
+							functionName: "safeMint",
+							args: [account.address],
+						})
 					}
 				>
 					mint
