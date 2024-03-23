@@ -6,7 +6,9 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"format": "biome format ./src --write",
+		"lint": "biome check ./src ",
+		"lint:fix": "bun run lint --apply"
 	},
 	"dependencies": {
 		"@tanstack/react-query": "5.0.5",

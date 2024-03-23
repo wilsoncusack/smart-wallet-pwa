@@ -1,0 +1,23 @@
+{
+	"name": "smart-wallet-pwa",
+	"short_name": "sw-pwa",
+	"description": "An example PWA using Smart Wallet",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#FFFFFF",
+	"theme_color": "#FFFFFF",
+	"orientation": "portrait",
+	"icons": [
+		{
+			"src": "/SW-PWA-192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "/SW-PWA-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

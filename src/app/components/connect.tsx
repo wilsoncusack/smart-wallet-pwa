@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 
 function Connect() {
