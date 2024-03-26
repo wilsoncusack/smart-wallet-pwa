@@ -8,13 +8,13 @@ import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const APP_NAME = "SW-PWA";
-const APP_DEFAULT_TITLE = "Smart Wallet PWA";
-const APP_TITLE_TEMPLATE = "%s - Smart Wallet PWA";
-const APP_DESCRIPTION = "An example PWA using Smart Wallet";
+const APP_NAME = "LLOWANCE";
+const APP_DEFAULT_TITLE = "LLOWANCE";
+const APP_TITLE_TEMPLATE = "%s - LLOWANCE";
+const APP_DESCRIPTION = "A smart wallet allowance application for familys";
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://smart-wallet-pwa.vercel.app/"),
+	metadataBase: new URL("https://llowance.com/"),
 	applicationName: APP_NAME,
 	title: {
 		default: APP_DEFAULT_TITLE,
