@@ -7,7 +7,7 @@ export const config = createConfig({
 	connectors: [
 		coinbaseWallet({
 			appName: "A Cool App",
-			chainIds: [baseSepolia.id.toString()],
+			appChainIds: [baseSepolia.id],
 		}),
 	],
 	ssr: true,
