@@ -31,9 +31,6 @@ function App() {
 					className="mt-5 w-full py-2 bg-gray-600 text-white font-bold rounded transition duration-300 ease-in-out transform hover:scale-105 mb-3"
 					onClick={() =>
 						writeContract({
-							// NOTE: Prepared is needed as by default writeContract simulates
-							// first and the delayed call will cause some browsers to block the popup
-							__mode: "prepared",
 							address: "0x119Ea671030FBf79AB93b436D2E20af6ea469a19",
 							abi,
 							functionName: "safeMint",
