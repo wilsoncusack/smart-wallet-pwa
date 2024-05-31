@@ -1,13 +1,13 @@
 import { http, createConfig } from "wagmi";
 import { baseSepolia } from "wagmi/chains";
-import { coinbaseWallet, injected } from "wagmi/connectors";
+import { coinbaseWallet } from "wagmi/connectors";
 
 export const config = createConfig({
 	chains: [baseSepolia],
 	connectors: [
 		coinbaseWallet({
-			appName: "A Cool App",
-			appChainIds: [baseSepolia.id],
+			appName: "An example Smart Wallet PWA App",
+			preference: 'smartWalletOnly'
 		}),
 	],
 	ssr: true,
